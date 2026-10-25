@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rahul M Salagundi · DevOps Engineer</title>
+  <meta name="description" content="Rahul M Salagundi, DevOps Engineer and AWS Certified Solutions Architect in Bengaluru. AWS, Kubernetes, Terraform, CI/CD, observability and AI agents for infrastructure." />
+  <meta name="theme-color" content="#f6f7f9" />
+  <meta property="og:title" content="Rahul M Salagundi · DevOps Engineer" />
+  <meta property="og:description" content="Runs production AWS and Kubernetes and makes it faster, cheaper and more secure." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ffffff'/%3E%3Cpath d='M10 40 L22 40 L28 22 L36 50 L42 32 L54 32' fill='none' stroke='%23059669' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ============ TOP BAR ============ -->
+  <header class="topbar" id="topbar">
+    <a href="#top" class="topbar__brand mono" aria-label="Back to top">
+      <span class="brand-prompt">rahul@prod:~$</span><span class="caret"></span>
+    </a>
+    <nav class="topbar__nav" id="nav" aria-label="Sections">
+      <a href="#overview" data-nav>overview</a>
+      <a href="#metrics" data-nav>impact</a>
+      <a href="#pipeline" data-nav>pipeline</a>
+      <a href="#deployments" data-nav>projects</a>
+      <a href="#stack" data-nav>stack</a>
+      <a href="#certs" data-nav>certs</a>
+      <a href="#contact" data-nav>contact</a>
+    </nav>
+    <div class="topbar__status mono">
+      <span class="health"><span class="pulse"></span><span class="health__text">all systems operational</span></span>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+    <div class="rollout" aria-hidden="true"><span id="rollout"></span></div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <canvas id="topology" class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__inner wrap">
+        <div class="hero__copy">
+          <p class="chip mono" data-reveal><span class="pulse"></span>Bengaluru, India · ap-south-1</p>
+          <h1 class="hero__name" data-reveal>Rahul M <span class="accent">Salagundi</span></h1>
+          <p class="hero__role mono" data-reveal>DevOps Engineer · AWS Certified Solutions Architect</p>
+          <p class="hero__lead" data-reveal>
+            I run production AWS and Kubernetes and make it faster, cheaper and more secure.
+            I've cut CI/CD build times by <b>79%</b>, lowered AWS bills by <b>15–23%</b> at two companies,
+            contained a live AWS security attack, and I build AI agents that resolve infrastructure tickets end to end.
+          </p>
+          <div class="hero__cta" data-reveal>
+            <a href="#pipeline" class="btn btn--primary">View experience</a>
+            <a href="assets/docs/Rahul_M_Salagundi.pdf" class="btn btn--ghost" download>Download résumé</a>
+            <a href="https://github.com/codeinja" class="btn btn--ghost" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="term" data-reveal>
+          <div class="term__bar">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="term__title mono">zsh — kubectl</span>
+          </div>
+          <pre class="term__body mono" id="heroTerm" aria-label="Terminal summary of Rahul's profile"></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 01 OVERVIEW ============ -->
+    <section class="section" id="overview">
+      <div class="wrap">
+        <header class="sec-head" data-reveal>
+          <span class="sec-head__idx mono">01</span>
+          <div>
+            <h2>Overview</h2>
+            <p class="sec-head__cmd mono">$ kubectl describe engineer rahul</p>
+          </div>
+        </header>
+
+        <div class="overview">
+          <div class="overview__text" data-reveal>
+            <p class="lede">An AWS Certified Solutions Architect and DevOps engineer with 3 years of keeping production systems healthy, from a 100+ engineer R&amp;D org at Nokia to running AWS and EKS at Quintype.</p>
+            <p>I work across the stack: <b>FinOps</b> (cutting cloud bills without cutting capability), <b>security</b> (SCPs, SSO, least-privilege IAM, IRSA, supply-chain scanning), <b>delivery</b> (Jenkins, Helm, Argo CD) and <b>reliability</b> (multi-master databases and dashboards that answer questions fast).</p>
+            <p>Lately I build AI DevOps agents with LangChain, LangGraph and MCP that take routine infrastructure tickets and close them end to end.</p>
+          </div>
+
+          <dl class="facts card mono" data-reveal>
+            <div><dt>status</dt><dd><span class="pill pill--ok">Running</span></dd></div>
+            <div><dt>role</dt><dd>DevOps Engineer</dd></div>
+            <div><dt>node</dt><dd>Quintype Technologies</dd></div>
+            <div><dt>experience</dt><dd>3 years</dd></div>
+            <div><dt>certified</dt><dd>AWS Solutions Architect – Associate</dd></div>
+            <div><dt>in progress</dt><dd>Certified Kubernetes Administrator</dd></div>
+            <div><dt>location</dt><dd>Bengaluru, India</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 IMPACT ============ -->
+    <section class="section" id="metrics">
+      <div class="wrap">
+        <header class="sec-head" data-reveal>
+          <span class="sec-head__idx mono">02</span>
+          <div>
+            <h2>Impact, in numbers</h2>
+            <p class="sec-head__cmd mono">$ terraform plan <span class="dim"># what changed because I was there</span></p>
+          </div>
+        </header>
+
+        <div class="impacts">
+          <article class="impact card" data-reveal>
+            <header class="impact__meta mono"><span>SecPod</span><span class="tag tag--blue">CI/CD speed</span></header>
+            <div class="impact__delta"><span data-count="79" data-prefix="−">0</span><small>%</small></div>
+            <h3 class="impact__title">Builds went from 2 hours to 25 minutes</h3>
+            <div class="hbars">
+              <div class="hbar"><span>Before</span><div class="hbar__track"><i class="hbar__fill hbar__fill--before" style="--w:100%"></i></div><span class="mono">120 min</span></div>
+              <div class="hbar"><span>After</span><div class="hbar__track"><i class="hbar__fill hbar__fill--after" style="--w:21%"></i></div><span class="mono">25 min</span></div>
+            </div>
+            <p class="impact__how">Redesigned the Jenkins pipelines to run stages in parallel, behind a high-availability controller.</p>
+            <p class="impact__result">Ships in <b>3+ release windows a day</b></p>
+          </article>
+
+          <article class="impact card" data-reveal>
+            <header class="impact__meta mono"><span>Quintype</span><span class="tag tag--green">Cloud cost</span></header>
+            <div class="impact__delta"><span data-count="15" data-prefix="−">0</span><small>%</small></div>
+            <h3 class="impact__title">AWS bill went from $40K to $34K a month</h3>
+            <div class="hbars">
+              <div class="hbar"><span>Before</span><div class="hbar__track"><i class="hbar__fill hbar__fill--before" style="--w:100%"></i></div><span class="mono">$40K</span></div>
+              <div class="hbar"><span>After</span><div class="hbar__track"><i class="hbar__fill hbar__fill--after" style="--w:85%"></i></div><span class="mono">$34K</span></div>
+            </div>
+            <p class="impact__how">Optimized EC2, RDS, S3, load balancers and Route 53 usage.</p>
+            <p class="impact__result">About <b>$72K saved every year</b></p>
+          </article>
+
+          <article class="impact card" data-reveal>
+            <header class="impact__meta mono"><span>SecPod</span><span class="tag tag--green">Cloud cost</span></header>
+            <div class="impact__delta"><span data-count="23" data-prefix="−">0</span><small>%</small></div>
+            <h3 class="impact__title">AWS bill cut by almost a quarter</h3>
+            <div class="hbars">
+              <div class="hbar"><span>Before</span><div class="hbar__track"><i class="hbar__fill hbar__fill--before" style="--w:100%"></i></div><span class="mono">100%</span></div>
+              <div class="hbar"><span>After</span><div class="hbar__track"><i class="hbar__fill hbar__fill--after" style="--w:77%"></i></div><span class="mono">77%</span></div>
+            </div>
+            <p class="impact__how">Replaced Transit Gateway with VPC peering, shrank EC2 disks from 100 GB to 30 GB, and moved cold EFS data to cheaper storage.</p>
+            <p class="impact__result">Per-GB <b>transit fees removed</b></p>
+          </article>
+        </div>
+
+        <article class="changes card" data-reveal>
+          <header class="changes__head">
+            <h3>Before → after</h3>
+            <span class="mono dim">Plan: <span class="ok">9 to change</span>, 0 to destroy</span>
+          </header>
+          <div class="changes__cols mono" aria-hidden="true"><span>Area</span><span>Before</span><span>After</span><span>Where</span></div>
+          <div class="change">
+            <span class="change__area">Security incident</span>
+            <span class="change__before"><i class="sign mono">−</i>Live attack on production AWS</span>
+            <span class="change__after"><i class="sign mono">+</i>Contained and fixed; every account now has SCP guardrails and alerts on any new resource</span>
+            <span class="change__org mono">Quintype</span>
+          </div>
+          <div class="change">
+            <span class="change__area">Engineer access</span>
+            <span class="change__before"><i class="sign mono">−</i>Long-lived IAM user keys for engineers and testers</span>
+            <span class="change__after"><i class="sign mono">+</i>Everyone signs in through AWS SSO, with zero disruption to dev or QA</span>
+            <span class="change__org mono">Quintype</span>
+          </div>
+          <div class="change">
+            <span class="change__area">Permissions</span>
+            <span class="change__before"><i class="sign mono">−</i>Broad IAM grants across accounts</span>
+            <span class="change__after"><i class="sign mono">+</i>Least-privilege, fine-grained role policies after a full audit</span>
+            <span class="change__org mono">Quintype</span>
+          </div>
+          <div class="change">
+            <span class="change__area">App credentials</span>
+            <span class="change__before"><i class="sign mono">−</i>Static AWS access keys inside workloads</span>
+            <span class="change__after"><i class="sign mono">+</i>No static keys: EKS upgraded and services moved to IRSA</span>
+            <span class="change__org mono">Quintype</span>
+          </div>
+          <div class="change">
+            <span class="change__area">Database</span>
+            <span class="change__before"><i class="sign mono">−</i>Amazon RDS was a single point of failure</span>
+            <span class="change__after"><i class="sign mono">+</i>Multi-master MariaDB Galera cluster with query-level monitoring</span>
+            <span class="change__org mono">SecPod</span>
+          </div>
+          <div class="change">
+            <span class="change__area">Infrastructure</span>
+            <span class="change__before"><i class="sign mono">−</i>Configuration drift between environments</span>
+            <span class="change__after"><i class="sign mono">+</i>100% of production in Terraform, with immutable deploys</span>
+            <span class="change__org mono">SecPod</span>
+          </div>
+          <div class="change">
+            <span class="change__area">Release decisions</span>
+            <span class="change__before"><i class="sign mono">−</i>Go/no-go calls took hours</span>
+            <span class="change__after"><i class="sign mono">+</i>Minutes, using the CI Cockpit dashboard; regressions caught 20% faster</span>
+            <span class="change__org mono">Nokia</span>
+          </div>
+          <div class="change">
+            <span class="change__area">Release effort</span>
+            <span class="change__before"><i class="sign mono">−</i>Manual Kubernetes release work</span>
+            <span class="change__after"><i class="sign mono">+</i>~40% less, using standard Helm chart pipelines</span>
+            <span class="change__org mono">Nokia</span>
+          </div>
+          <div class="change">
+            <span class="change__area">Status reporting</span>
+            <span class="change__before"><i class="sign mono">−</i>Manual weekly status updates</span>
+            <span class="change__after"><i class="sign mono">+</i>~3 hours a week saved per team by linking JIRA to CI</span>
+            <span class="change__org mono">Nokia</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 03 PIPELINE (EXPERIENCE) ============ -->
+    <section class="section" id="pipeline">
+      <div class="wrap">
+        <header class="sec-head" data-reveal>
+          <span class="sec-head__idx mono">03</span>
+          <div>
+            <h2>Career pipeline</h2>
+            <p class="sec-head__cmd mono">$ gh run view career --log <span class="dim"># select a job to see its log</span></p>
+          </div>
+        </header>
+
+        <div class="pipe card" data-reveal>
+          <div class="pipe__meta mono">
+            <span class="pill pill--run"><span class="spinner"></span>running</span>
+            <span>career.yml</span>
+            <span class="dim">· started Jun 2019</span>
+          </div>
+
+          <div class="pipe__graph" id="pipeGraph">
+            <svg class="pipe__links" id="pipeLinks" aria-hidden="true"></svg>
+
+            <div class="stage">
+              <p class="stage__name mono">build</p>
+              <button class="job" data-job="bca" data-status="ok">
+                <span class="job__icon"></span>
+                <span class="job__body"><b>BCA</b><small>New Horizon College</small></span>
+                <span class="job__time mono">2019–22</span>
+              </button>
+              <button class="job" data-job="mca" data-status="ok">
+                <span class="job__icon"></span>
+                <span class="job__body"><b>MCA</b><small>RV College of Engineering</small></span>
+                <span class="job__time mono">2023–24</span>
+              </button>
+            </div>
+
+            <div class="stage">
+              <p class="stage__name mono">test</p>
+              <button class="job" data-job="nokia" data-status="ok">
+                <span class="job__icon"></span>
+                <span class="job__body"><b>Nokia</b><small>Associate R&amp;D Engineer</small></span>
+                <span class="job__time mono">1y 8m</span>
+              </button>
+            </div>
+
+            <div class="stage">
+              <p class="stage__name mono">staging</p>
+              <button class="job" data-job="secpod" data-status="ok">
+                <span class="job__icon"></span>
+                <span class="job__body"><b>SecPod</b><small>DevOps Engineer</small></span>
+                <span class="job__time mono">1y</span>
+              </button>
+            </div>
+
+            <div class="stage">
+              <p class="stage__name mono">production</p>
+              <button class="job is-active" data-job="quintype" data-status="run">
+                <span class="job__icon"></span>
+                <span class="job__body"><b>Quintype</b><small>DevOps Engineer</small></span>
+                <span class="job__time mono" id="quintypeAge">running</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="logs">
+            <article class="joblog" data-log="quintype">
+              <header class="joblog__head">
+                <div>
+                  <h3>DevOps Engineer · Quintype Technologies</h3>
+                  <p class="mono dim">Jul 2026 – present · Bengaluru</p>
+                </div>
+              </header>
+              <ol class="joblog__lines">
+                <li><span class="lvl mono">finops</span>Reduced AWS spend by <b>15%</b> ($40K → $34K/month, <b>~$72K/year</b>) by optimizing EC2, RDS, S3, ELB and Route 53.</li>
+                <li><span class="lvl mono">ai</span>Built an <b>AI DevOps agent</b> on LangChain and LangGraph that resolves routine infrastructure tickets end to end, using MCP servers and custom tools to generate Terraform for Cloudflare block rules and handle GitHub access requests.</li>
+                <li><span class="lvl lvl--crit mono">incident</span><b>Contained and remediated an active security attack</b> on production AWS, then hardened every account with SCPs across AWS Organizations and automated alerting on any new resource creation.</li>
+                <li><span class="lvl mono">iam</span>Eliminated <b>long-lived IAM user credentials</b> for all engineers and testers by migrating access to AWS IAM Identity Center (SSO), with zero disruption to development or QA.</li>
+                <li><span class="lvl mono">iam</span>Reduced the IAM attack surface across all AWS accounts by auditing every permission and replacing broad grants with least-privilege, fine-grained role policies.</li>
+                <li><span class="lvl mono">k8s</span>Removed static IAM access keys from workloads by upgrading production <b>Amazon EKS</b> and migrating services to <b>IRSA</b> through AWS IAM and Chef changes.</li>
+                <li><span class="lvl mono">secrets</span>Deployed self-hosted <b>Passbolt</b> on EKS, provisioned with Terraform and Chef, for secure, auditable credential sharing across teams.</li>
+                <li><span class="lvl mono">ai</span>Optimized and budgeted company AI tooling spend; standardized AI usage with written guidelines and engineering training sessions.</li>
+              </ol>
+            </article>
+
+            <article class="joblog" data-log="secpod" hidden>
+              <header class="joblog__head">
+                <div>
+                  <h3>DevOps Engineer · SecPod Technologies</h3>
+                  <p class="mono dim">Jul 2025 – Jun 2026 · Bengaluru</p>
+                </div>
+              </header>
+              <ol class="joblog__lines">
+                <li><span class="lvl mono">finops</span>Reduced AWS spend by <b>23%</b> by replacing Transit Gateway with VPC peering to remove per-GB transit fees, rightsizing EC2 root volumes from 100 GB to 30 GB, and tiering cold EFS data to Infrequent Access.</li>
+                <li><span class="lvl mono">ci/cd</span>Cut CI/CD build time by <b>79% (120 → 25 min)</b>, enabling 3+ release windows per day, by redesigning Jenkins pipelines with parallel stages and a high-availability controller.</li>
+                <li><span class="lvl mono">gitops</span>Shipped an <b>MCP server</b> to production Kubernetes with zero manual intervention: authored production-grade Helm charts and owned the full Argo CD release lifecycle.</li>
+                <li><span class="lvl mono">db</span>Eliminated the database single point of failure by migrating from Amazon RDS to a self-managed <b>MariaDB Galera</b> multi-master cluster, with query-level observability in Percona PMM.</li>
+                <li><span class="lvl mono">iac</span>Eliminated configuration drift by codifying <b>100%</b> of production infrastructure in Terraform and enforcing immutable deployments.</li>
+                <li><span class="lvl mono">devsecops</span>Hardened the software supply chain for enterprise audits with automated SAST, dependency scanning and SBOM generation in every CI/CD run.</li>
+              </ol>
+            </article>
+
+            <article class="joblog" data-log="nokia" hidden>
+              <header class="joblog__head">
+                <div>
+                  <h3>Associate R&amp;D Engineer · Nokia Solutions and Networks</h3>
+                  <p class="mono dim">Nov 2023 – Jun 2025 · Bengaluru</p>
+                </div>
+              </header>
+              <ol class="joblog__lines">
+                <li><span class="lvl mono">observability</span>Designed <b>CI Cockpit</b>, an Elasticsearch-backed dashboard for regression trends, pipeline metrics and release health. Cut regression MTTD by <b>20%</b> and go/no-go decisions from hours to minutes for 18+ engineering managers. Won the <b>SSP Excellence Award</b>.</li>
+                <li><span class="lvl mono">ci/cd</span>Re-architected Jenkins CI/CD pipelines for a <b>100+ engineer</b> R&amp;D org through performance tuning and workflow redesign, reducing flaky builds and improving release cadence.</li>
+                <li><span class="lvl mono">k8s</span>Cut manual release effort by <b>~40%</b> by building and standardizing Helm chart pipelines for Kubernetes delivery.</li>
+                <li><span class="lvl mono">automation</span>Saved <b>~3 hours/week</b> of status reporting per team by integrating JIRA with CI pipelines for commit-to-resolution traceability.</li>
+              </ol>
+            </article>
+
+            <article class="joblog" data-log="mca" hidden>
+              <header class="joblog__head">
+                <div>
+                  <h3>Master of Computer Applications · RV College of Engineering</h3>
+                  <p class="mono dim">Feb 2023 – Sep 2024 · Bengaluru</p>
+                </div>
+              </header>
+              <ol class="joblog__lines">
+                <li><span class="lvl mono">edu</span>Postgraduate degree in computer applications.</li>
+              </ol>
+            </article>
+
+            <article class="joblog" data-log="bca" hidden>
+              <header class="joblog__head">
+                <div>
+                  <h3>Bachelor of Computer Applications · New Horizon College</h3>
+                  <p class="mono dim">Jun 2019 – Oct 2022 · Bengaluru</p>
+                </div>
+              </header>
+              <ol class="joblog__lines">
+                <li><span class="lvl mono">edu</span>Undergraduate degree in computer applications.</li>
+              </ol>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 PROJECTS ============ -->
+    <section class="section" id="deployments">
+      <div class="wrap">
+        <header class="sec-head" data-reveal>
+          <span class="sec-head__idx mono">04</span>
+          <div>
+            <h2>Projects</h2>
+            <p class="sec-head__cmd mono">$ kubectl get deployments</p>
+          </div>
+        </header>
+
+        <article class="feature card" data-reveal>
+          <div class="feature__copy">
+            <p class="feature__kicker mono"><span class="pill pill--ok">open source</span> deployment/instadeploy</p>
+            <h3 class="feature__title">InstaDeploy</h3>
+            <p class="feature__tag mono">Deploy Docker. Get a URL.</p>
+            <p>A self-hosted PaaS. Run any Docker app on your own machine and get a public HTTPS URL in seconds, with no port forwarding, reverse proxy, certificates or cloud bill.</p>
+            <ul class="feature__list">
+              <li><b>Pull-based control plane.</b> The server records desired state; per-host Go agents long-poll a task queue and run the containers.</li>
+              <li><b>Zero open ports.</b> Outbound tunnels to an edge gateway that terminates TLS, so it works behind NAT and firewalls.</li>
+              <li><b>Continuous deployment</b> on every git push, with revisions, one-click rollback, health checks and live logs.</li>
+              <li><b>Secure by default.</b> Encrypted secrets redacted from logs, revocable host tokens, and checks that block privileged containers.</li>
+            </ul>
+            <div class="tags mono"><span>Go</span><span>Next.js</span><span>PostgreSQL</span><span>Docker Compose</span><span>Pangolin</span><span>TLS</span></div>
+            <div class="feature__cta">
+              <a class="btn btn--primary" href="https://github.com/codeinja/instadeploy" target="_blank" rel="noopener">View on GitHub ↗</a>
+              <a class="btn btn--ghost" href="https://github.com/codeinja/instadeploy/blob/main/docs/architecture.md" target="_blank" rel="noopener">Architecture</a>
+            </div>
+          </div>
+
+          <div class="feature__diagram">
+            <svg id="archSvg" class="arch" viewBox="0 0 720 420" role="img" aria-label="InstaDeploy architecture: agents poll the API, the API creates routes on the Pangolin gateway, and visitor traffic reaches apps through an outbound tunnel">
+              <defs>
+                <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#94a3b8" /></marker>
+              </defs>
+
+              <g class="grp grp--srv"><rect x="250" y="14" width="220" height="196" rx="14" /><text x="264" y="36">insta-deploy server</text></g>
+              <g class="grp grp--cld"><rect x="520" y="104" width="184" height="108" rx="14" /><text x="534" y="126">pangolin edge</text></g>
+              <g class="grp grp--mch"><rect x="250" y="236" width="454" height="168" rx="14" /><text x="264" y="258">your machine</text></g>
+
+              <path id="eYou" class="edge" d="M174 68 L270 68" marker-end="url(#arw)" />
+              <path class="edge" d="M360 88 L360 100" />
+              <path class="edge" d="M360 140 L360 152" />
+              <path id="ePoll" class="edge edge--poll" d="M266 288 C 200 288, 200 120, 270 120" marker-end="url(#arw)" />
+              <path id="eRoute" class="edge edge--route" d="M450 120 C 495 120, 490 164, 536 164" marker-end="url(#arw)" />
+              <path class="edge edge--tunnel" d="M612 348 L612 190" marker-end="url(#arw)" />
+              <path class="edge" d="M612 64 L612 138" marker-end="url(#arw)" />
+              <path class="edge" d="M394 288 L414 288" />
+              <path class="edge" d="M478 308 L478 348" />
+              <path class="edge" d="M562 368 L542 368" marker-end="url(#arw)" />
+              <path id="eReq" class="edge edge--ghost" d="M612 64 L612 368 L542 368" />
+
+              <text class="elabel" x="132" y="196">① poll tasks</text>
+              <text class="elabel" x="462" y="106">② routes</text>
+              <text class="elabel" x="620" y="276">③ tunnel</text>
+              <text class="elabel" x="620" y="90">④ https</text>
+
+              <g class="node node--ppl"><rect x="24" y="48" width="150" height="40" rx="20" /><text x="99" y="73">you</text></g>
+              <g class="node node--ppl"><rect x="536" y="24" width="152" height="40" rx="20" /><text x="612" y="49">visitor</text></g>
+              <g class="node node--srv"><rect x="270" y="48" width="180" height="40" rx="8" /><text x="360" y="73">dashboard</text></g>
+              <g class="node node--srv"><rect x="270" y="100" width="180" height="40" rx="8" /><text x="360" y="125">api · go</text></g>
+              <g class="node node--srv"><rect x="270" y="152" width="180" height="40" rx="8" /><text x="360" y="177">postgresql</text></g>
+              <g class="node node--cld"><rect x="536" y="140" width="152" height="48" rx="8" /><text x="612" y="169">gateway</text></g>
+              <g class="node node--mch"><rect x="266" y="268" width="128" height="40" rx="8" /><text x="330" y="293">agent</text></g>
+              <g class="node node--mch"><rect x="414" y="268" width="128" height="40" rx="8" /><text x="478" y="293">docker</text></g>
+              <g class="node node--mch"><rect x="414" y="348" width="128" height="40" rx="8" /><text x="478" y="373">your app</text></g>
+              <g class="node node--mch"><rect x="562" y="348" width="128" height="40" rx="8" /><text x="626" y="373">tunnel</text></g>
+
+              <g class="packets">
+                <circle r="4" class="pk pk--green"><animateMotion dur="2.6s" repeatCount="indefinite"><mpath href="#ePoll" /></animateMotion></circle>
+                <circle r="4" class="pk pk--amber"><animateMotion dur="2s" begin=".5s" repeatCount="indefinite"><mpath href="#eRoute" /></animateMotion></circle>
+                <circle r="4" class="pk pk--blue"><animateMotion dur="3s" repeatCount="indefinite"><mpath href="#eReq" /></animateMotion></circle>
+              </g>
+            </svg>
+          </div>
+        </article>
+
+        <div class="cards">
+          <article class="card project" data-reveal>
+            <p class="project__ns mono">Quintype · internal</p>
+            <h4>AI DevOps Agent</h4>
+            <p>Takes routine infrastructure tickets and closes them: generates Terraform for Cloudflare block rules and handles GitHub access requests through MCP servers and custom tools.</p>
+            <div class="tags mono"><span>LangChain</span><span>LangGraph</span><span>MCP</span><span>Terraform</span></div>
+          </article>
+          <article class="card project" data-reveal>
+            <p class="project__ns mono">Nokia · SSP Excellence Award</p>
+            <h4>CI Cockpit</h4>
+            <p>The R&amp;D org's main regression-analysis tool: one Elasticsearch-backed view of regression trends, pipeline metrics and release health.</p>
+            <div class="tags mono"><span>Elasticsearch</span><span>Jenkins</span><span>Dashboards</span></div>
+          </article>
+          <article class="card project" data-reveal>
+            <p class="project__ns mono">SecPod · internal</p>
+            <h4>MCP server via GitOps</h4>
+            <p>Production-grade Helm charts and the full Argo CD release lifecycle, shipping an MCP server to Kubernetes with zero manual steps.</p>
+            <div class="tags mono"><span>Helm</span><span>Argo CD</span><span>Kubernetes</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 05 STACK ============ -->
+    <section class="section" id="stack">
+      <div class="wrap">
+        <header class="sec-head" data-reveal>
+          <span class="sec-head__idx mono">05</span>
+          <div>
+            <h2>Stack</h2>
+            <p class="sec-head__cmd mono">$ kubectl get pods --all-namespaces</p>
+          </div>
+        </header>
+
+        <div class="stack card" data-reveal>
+          <div class="ns">
+            <h3 class="mono"><i style="--c:#ea580c"></i>cloud-aws</h3>
+            <div class="chips"><span>EC2</span><span>EKS</span><span>S3</span><span>RDS</span><span>VPC</span><span>IAM</span><span>IAM Identity Center</span><span>Organizations / SCPs</span><span>Lambda</span><span>CloudWatch</span><span>EventBridge</span><span>Route 53</span><span>ELB</span><span>OpenSearch</span><span>ElastiCache</span></div>
+          </div>
+          <div class="ns">
+            <h3 class="mono"><i style="--c:#4f46e5"></i>containers-gitops</h3>
+            <div class="chips"><span>Kubernetes (EKS, kubeadm)</span><span>Docker</span><span>Helm</span><span>Argo CD</span><span>IRSA</span></div>
+          </div>
+          <div class="ns">
+            <h3 class="mono"><i style="--c:#0284c7"></i>cicd-devsecops</h3>
+            <div class="chips"><span>Jenkins (HA)</span><span>CircleCI</span><span>Rundeck</span><span>GitHub</span><span>JFrog Artifactory</span><span>SAST</span><span>SBOM</span><span>Passbolt</span></div>
+          </div>
+          <div class="ns">
+            <h3 class="mono"><i style="--c:#7c3aed"></i>infrastructure-as-code</h3>
+            <div class="chips"><span>Terraform</span><span>Chef</span><span>Cloudflare</span></div>
+          </div>
+          <div class="ns">
+            <h3 class="mono"><i style="--c:#c026d3"></i>databases</h3>
+            <div class="chips"><span>MariaDB Galera</span><span>PostgreSQL</span><span>Amazon RDS</span><span>Percona PMM</span></div>
+          </div>
+          <div class="ns">
+            <h3 class="mono"><i style="--c:#d97706"></i>observability</h3>
+            <div class="chips"><span>Prometheus</span><span>Grafana</span><span>Elasticsearch</span><span>CloudWatch</span></div>
+          </div>
+          <div class="ns">
+            <h3 class="mono"><i style="--c:#059669"></i>ai-languages</h3>
+            <div class="chips"><span>LangChain</span><span>LangGraph</span><span>MCP</span><span>Python</span><span>Bash</span><span>Groovy</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06 CERTS ============ -->
+    <section class="section" id="certs">
+      <div class="wrap">
+        <header class="sec-head" data-reveal>
+          <span class="sec-head__idx mono">06</span>
+          <div>
+            <h2>Certificates &amp; awards</h2>
+            <p class="sec-head__cmd mono">$ openssl x509 -in rahul.crt -noout -text</p>
+          </div>
+        </header>
+
+        <article class="cert card" data-reveal>
+          <a href="https://www.credly.com/badges/3846a67a-2bed-42d4-bcce-54bb1077b29c" target="_blank" rel="noopener" class="cert__badge" aria-label="View AWS badge on Credly">
+            <img src="https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png" alt="AWS Certified Solutions Architect – Associate badge" width="180" height="180" loading="lazy" />
+          </a>
+          <div class="cert__body">
+            <p class="cert__lock mono"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> valid certificate <span class="dim" id="certDays"></span></p>
+            <h3>AWS Certified Solutions Architect – Associate</h3>
+            <dl class="x509 mono">
+              <dt>Subject</dt><dd>Rahul M Salagundi</dd>
+              <dt>Issuer</dt><dd>Amazon Web Services Training and Certification</dd>
+              <dt>Valid</dt><dd>Oct 24, 2026 → Oct 24, 2029</dd>
+              <dt>Validation no.</dt><dd class="copyable"><code>1020a1369d5d4715a9f60a6f395718dc</code><button class="copy" data-copy="1020a1369d5d4715a9f60a6f395718dc" aria-label="Copy validation number">copy</button></dd>
+            </dl>
+            <div class="cert__cta">
+              <a class="btn btn--primary" href="https://www.credly.com/badges/3846a67a-2bed-42d4-bcce-54bb1077b29c" target="_blank" rel="noopener">Verify on Credly ↗</a>
+              <a class="btn btn--ghost" href="https://aws.amazon.com/verification" target="_blank" rel="noopener">AWS verification ↗</a>
+              <a class="btn btn--ghost" href="assets/docs/AWS_Certified_Solutions_Architect_Associate.pdf" target="_blank" rel="noopener">Certificate PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pending card" data-reveal>
+          <div class="pending__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 20.2 6.4 22.2 15.3 16.6 22.3 7.4 22.3 1.8 15.3 3.8 6.4Z"/><circle cx="12" cy="13" r="3"/><path d="M12 6.5V10M12 16v3.5M5.8 11l3.3 1M14.9 14l3.3 1M18.2 11l-3.3 1M9.1 14l-3.3 1"/></svg>
+          </div>
+          <div class="pending__body">
+            <p class="mono dim">The Linux Foundation · CNCF</p>
+            <h3>Certified Kubernetes Administrator (CKA)</h3>
+          </div>
+          <span class="pill pill--run"><span class="spinner"></span>in progress</span>
+        </article>
+
+        <div class="certs__side">
+          <article class="award card" data-reveal>
+            <div class="award__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></div>
+            <div>
+              <p class="mono dim">award · Nokia</p>
+              <h3>SSP Excellence Award</h3>
+              <p>For designing CI Cockpit, which became the R&amp;D org's primary regression-analysis tool.</p>
+            </div>
+          </article>
+          <article class="edu card" data-reveal>
+            <p class="mono dim">education</p>
+            <div class="edu__row">
+              <div><h4>Master of Computer Applications</h4><p>RV College of Engineering, Bengaluru</p></div>
+              <span class="mono">2023–24</span>
+            </div>
+            <div class="edu__row">
+              <div><h4>Bachelor of Computer Applications</h4><p>New Horizon College, Bengaluru</p></div>
+              <span class="mono">2019–22</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 07 CONTACT ============ -->
+    <section class="section section--last" id="contact">
+      <div class="wrap">
+        <header class="sec-head" data-reveal>
+          <span class="sec-head__idx mono">07</span>
+          <div>
+            <h2>Contact</h2>
+            <p class="sec-head__cmd mono">$ curl -X POST /api/hello</p>
+          </div>
+        </header>
+
+        <article class="contact card" data-reveal>
+          <div>
+            <h3>Need infrastructure that's faster, cheaper and safer?</h3>
+            <p>Happy to talk about DevOps, platform engineering, or anything on this page.</p>
+            <p class="contact__mail mono"><a href="mailto:rahulsalagundi@outlook.com">rahulsalagundi@outlook.com</a></p>
+          </div>
+          <div class="contact__cta">
+            <a class="btn btn--primary btn--lg" href="mailto:rahulsalagundi@outlook.com?subject=Hello%20Rahul">Email me</a>
+            <a class="btn btn--ghost btn--lg" href="https://linkedin.com/in/rahul-m-salagundi-3b2107277" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a class="btn btn--ghost btn--lg" href="https://github.com/codeinja" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap mono">
+    <span>© <span id="year">2026</span> Rahul M Salagundi</span>
+    <a href="#top">back to top ↑</a>
+  </footer>
+
+  <div class="toast mono" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
