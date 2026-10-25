@@ -385,7 +385,21 @@
             </div>
           </div>
 
-          <div class="feature__diagram">
+          <div class="feature__media">
+            <div class="media-tabs mono" role="tablist" aria-label="InstaDeploy media">
+              <button class="is-active" role="tab" aria-selected="true" aria-controls="paneDemo" data-pane="paneDemo">▶ demo</button>
+              <button role="tab" aria-selected="false" aria-controls="paneArch" data-pane="paneArch">architecture</button>
+            </div>
+
+            <div class="media-pane" id="paneDemo" role="tabpanel">
+              <video class="demo-video" controls preload="metadata" playsinline poster="assets/videos/InstaDeploy_Product_Video_poster.jpg" aria-label="InstaDeploy product walkthrough video">
+                <source src="assets/videos/InstaDeploy_Product_Video.mp4" type="video/mp4" />
+                <a href="assets/videos/InstaDeploy_Product_Video.mp4">Download the InstaDeploy product video</a>
+              </video>
+              <p class="media-cap mono">product walkthrough · 1:52</p>
+            </div>
+
+            <div class="media-pane feature__diagram" id="paneArch" role="tabpanel" hidden>
             <svg id="archSvg" class="arch" viewBox="0 0 720 420" role="img" aria-label="InstaDeploy architecture: agents poll the API, the API creates routes on the Pangolin gateway, and visitor traffic reaches apps through an outbound tunnel">
               <defs>
                 <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#94a3b8" /></marker>
@@ -429,6 +443,7 @@
                 <circle r="4" class="pk pk--blue"><animateMotion dur="3s" repeatCount="indefinite"><mpath href="#eReq" /></animateMotion></circle>
               </g>
             </svg>
+            </div>
           </div>
         </article>
 

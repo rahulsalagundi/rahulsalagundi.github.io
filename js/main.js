@@ -332,6 +332,25 @@
     $("#certDays").textContent = days > 0 ? `· ${days} days remaining` : "· expired";
   })();
 
+  /* ---------------------------------------------------------
+     InstaDeploy media tabs: demo video / architecture
+     --------------------------------------------------------- */
+  (() => {
+    const tabs = $$(".media-tabs button");
+    const video = $(".demo-video");
+    tabs.forEach((tab) =>
+      tab.addEventListener("click", () => {
+        tabs.forEach((t) => {
+          const on = t === tab;
+          t.classList.toggle("is-active", on);
+          t.setAttribute("aria-selected", String(on));
+          $(`#${t.dataset.pane}`).hidden = !on;
+        });
+        if (tab.dataset.pane !== "paneDemo" && video) video.pause();
+      })
+    );
+  })();
+
   if (REDUCED) {
     const arch = $("#archSvg");
     if (arch && arch.pauseAnimations) arch.pauseAnimations();
